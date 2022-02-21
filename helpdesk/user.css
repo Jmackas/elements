@@ -1,0 +1,443 @@
+:root {
+    --cassiopeia-color-primary: #0d3b70;
+    --cassiopeia-color-link: #0d3b70;
+    --cassiopeia-color-hover: rgb(13 59 112 / 90%);
+}
+
+@font-face {
+    font-family: biosansreg;
+    src: url(https://help.eitidc.com/files/flat-it_-_biosans-regular.woff)
+}
+
+@font-face {
+    font-family: biosansbold;
+    src: url(https://help.eitidc.com/files/flat-it_-_bio_sans_bold.woff)
+}
+
+body {
+   font-family: biosansreg, sans-serif;;
+}
+
+/* Fix the logo size */
+.brand-logo img {
+    width: 270px;
+}
+
+/* Add some spacing between the search label and the input field */
+.form-search label {
+    margin-right: 10px;
+}
+
+/* Main nav header */
+header .grid-child {
+    background: #0d3b70;
+}
+
+/* Main banner */
+#mod-custom113 {
+    font-size: 130%;
+    font-weight: bold;
+    background: #0d3b70;
+    padding: 5% 27%;
+    color: white;
+}
+
+/* Remove the rounded edges */
+.card {
+    border-radius: 0;
+}
+
+/* Remove the background colour */
+.breadcrumb {
+ /*   background: none; */
+}
+
+/*====================================
+Misc Items
+===================================*/
+
+/* Hide the delete button for managing tickets */
+th#rst_head_delete, td.rst_cell_delete_ticket.center {
+    display: none;
+}
+
+
+.container-component>*+*, .container-component>:first-child, .container-sidebar-left>*+*, .container-sidebar-left>:first-child, .container-sidebar-right>*+*, .container-sidebar-right>:first-child {
+    margin-top: 0.5em;
+}
+
+/* Bulk actions drop down menus */
+[action="/manage-tickets"] select {
+    width: 377px;
+    margin-bottom: 1%;
+}
+
+/* Change the text "Category" to "Department" */
+[for="jform_department_id"] {
+    visibility: hidden;
+}
+
+/* Change the text "Category" to "Department" */
+[for="jform_department_id"]:before {
+    visibility: visible;
+    content: 'Category *';
+}
+
+/* Change the subtext "Category" to "Department" */
+div#jform\[department_id\]-desc .form-text {
+    visibility: hidden;
+}
+
+/* Change the subtext "Category" to "Department" */
+div#jform\[department_id\]-desc .form-text:before {
+    visibility: visible;
+    content: 'Please define where this issue exists.';
+}
+
+/* Hide the full priority text on the manage ticket display */
+.rst_priority_cell {
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+/* Center the footer */
+.footer .grid-child {
+    display: flex;
+    justify-content: center;
+}
+
+/* Hide the front page H1 */
+.view-featured h1 {
+    display: none;
+}
+
+/* Tag for resolved */
+.joomtag.resolved {
+    /* background: green; */
+    background-color: #2dc26b;
+    color: white;
+}
+
+/* Tag for ongoing  */
+.joomtag.ongoing {
+    /* background: red; */
+    background-color: #e67e23;
+    color: white;
+}
+
+/* Tag for notice  */
+.joomtag.notice {
+    /* background: red; */
+    background-color: gray;
+    color: white;
+}
+
+/* Tag for platforms */
+.joomtag.platform {
+    background-color: #007dda;
+    color: white;
+}
+
+/* Category Descriptions */
+.category-desc.clearfix {
+    border-bottom: 1px solid #dfe3e7;
+    margin-bottom: 25px;
+}
+
+/* Border line below each blog category */
+.com-content-category-blog__item {
+    border-bottom: 1px solid #dfe3e7;
+}
+
+
+/*====================================
+Forms
+===================================*/
+/* remove border radius from form inputs */
+.form-control {
+    border-radius: 0;
+}
+
+/*
+form#userForm {
+    margin: auto;
+    width: 70%;
+}
+*/
+
+/*====================================
+Menus
+===================================*/
+/* All menus */
+.custom-menu {
+    border-top: 6px solid #3a7bc8;
+    box-shadow: 0 10px 9px -6px rgb(0 0 0 / 20%) !important;
+}
+
+.custom-menu div {
+    padding: 0;
+}
+
+.custom-menu li {
+    padding: 0;
+}
+
+.custom-menu a {
+    padding: 15px 30px;
+    display: flex;
+    color: #0d3b70;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: .2s;
+    font-size: 1.2em;
+    border-bottom: 1px solid #d6d9e1;
+}
+
+.custom-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Secondary menu */
+.custom-menu.secondary-menu a {
+    font-size: 0.9em;
+    padding: 15px 20px;
+}
+
+/*====================================
+Home menu items
+===================================*/
+.home-menu ul {
+    display: inline-block;
+}
+
+.home-menu ul li {
+    display: inline-block;
+    float: left;
+    margin: 10px;
+}
+
+.home-menu ul li a {
+    border: 1px solid #dfe3e7;
+    color: rgb(255 255 255);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+}
+
+@font-face {
+    font-family: biosansreg;
+    src: url(https://moodle.eit.edu.au/theme/classic/fonts/flat-it_-_biosans-regular.woff)
+}
+
+@font-face {
+    font-family: biosansbold;
+    src: url(https://moodle.eit.edu.au/theme/classic/fonts/flat-it_-_bio_sans_bold.woff)
+}
+
+/* Fix the logo size */
+.brand-logo img {
+    width: 270px;
+}
+
+/* Add some spacing between the search label and the input field */
+.form-search label {
+    margin-right: 10px;
+}
+
+/* Main nav header */
+header .grid-child {
+    background: #0d3b70;
+}
+
+/* Main banner */
+#mod-custom113 {
+    font-size: 130%;
+    font-weight: bold;
+    background: #0d3b70;
+    padding: 5% 27%;
+    color: white;
+}
+
+/* Remove the rounded edges */
+.card {
+    border-radius: 0;
+}
+
+
+/*====================================
+Misc Items
+===================================*/
+/* Hide the delete button for managing tickets */
+th#rst_head_delete, td.rst_cell_delete_ticket.center {
+    display: none;
+}
+
+/* A trick to make the article in line with the top left menu */
+.container-component>*+*, .container-component>:first-child, .container-sidebar-left>*+*, .container-sidebar-left>:first-child, .container-sidebar-right>*+*, .container-sidebar-right>:first-child {
+    margin-top: 0.5em;
+}
+
+/* Bulk actions drop down menus */
+[action="/manage-tickets"] select {
+    width: 377px;
+    margin-bottom: 1%;
+}
+
+/* Change the text "Category" to "Department" */
+[for="jform_department_id"] {
+    visibility: hidden;
+}
+
+/* Change the text "Category" to "Department" */
+[for="jform_department_id"]:before {
+    visibility: visible;
+    content: 'Category *';
+}
+
+/* Change the subtext "Category" to "Department" */
+div#jform\[department_id\]-desc .form-text {
+    visibility: hidden;
+}
+
+/* Change the subtext "Category" to "Department" */
+div#jform\[department_id\]-desc .form-text:before {
+    visibility: visible;
+    content: 'Please define where this issue exists.';
+}
+
+/* Hide the full priority text on the manage ticket display */
+.rst_priority_cell {
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+/* Center the footer */
+.footer .grid-child {
+    display: flex;
+    justify-content: center;
+}
+
+/* Hide the front page H1 */
+.view-featured h1 {
+    display: none;
+}
+
+/* Tag for resolved */
+.joomtag.resolved {
+    /* background: green; */
+    background-color: #2dc26b;
+    color: white;
+}
+
+/* Tag for ongoing  */
+.joomtag.ongoing {
+    /* background: red; */
+    background-color: #e67e23;
+    color: white;
+}
+
+/* Tag for notice  */
+.joomtag.notice {
+    /* background: red; */
+    background-color: gray;
+    color: white;
+}
+
+/* Tag for platforms */
+.joomtag.platform {
+    background-color: #007dda;
+    color: white;
+}
+
+/* Category Descriptions */
+.category-desc.clearfix {
+    border-bottom: 1px solid #dfe3e7;
+    margin-bottom: 25px;
+}
+
+/* Border line below each blog category */
+.com-content-category-blog__item {
+    border-bottom: 1px solid #dfe3e7;
+}
+
+/*====================================
+Menus
+===================================*/
+/* All menus */
+.custom-menu {
+    box-shadow: 0 10px 9px -6px rgb(0 0 0 / 20%) !important;
+}
+
+.custom-menu div {
+    padding: 0;
+}
+
+.custom-menu li {
+    padding: 0;
+}
+
+.custom-menu a {
+    padding: 15px 30px;
+    display: flex;
+    color: #0d3b70;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: .5s;
+    font-size: 1.2em;
+    border-bottom: 1px solid #d6d9e1;
+}
+
+.custom-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Secondary menu */
+.custom-menu.secondary-menu a {
+    font-size: 0.9em;
+    padding: 15px 20px;
+}
+
+/*====================================
+Home menu items
+===================================*/
+.home-menu ul {
+    display: inline-block;
+}
+
+.home-menu ul li {
+    display: inline-block;
+    float: left;
+    margin: 10px;
+}
+
+.home-menu ul li a {
+    border: 1px solid #dfe3e7;
+    background: rgb(13 59 112);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    height: 200px;
+    width: 200px;
+}
+
+.home-menu ul li a:hover {
+
+text-decoration: none;
+background:#3a7bc8;
+}
