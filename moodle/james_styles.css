@@ -1,0 +1,1041 @@
+/*
+
+
+Colours
+---------
+Dark Blue
+#003a70
+
+Orange:
+#E87722
+
+Lightgrey
+#ccd7e2
+---------
+
+*/
+/*===========================
+Universal
+===========================*/
+/* EIT Library styles */
+@import url("https://moodle.eit.edu.au/theme/classic/custom/library_overhaul.css");
+
+/* Fonts imported */
+@font-face {
+    font-family: biosansreg;
+    src: url(https://moodle.eit.edu.au/theme/classic/fonts/flat-it_-_biosans-regular.woff);
+}
+
+@font-face {
+    font-family: biosansbold;
+    src: url(https://moodle.eit.edu.au/theme/classic/fonts/flat-it_-_bio_sans_bold.woff);
+}
+
+
+
+
+body {
+    font-family: biosansreg;
+    /* Font colour change */
+    color: #333;
+}
+
+/* All hyperlinks */
+a {
+    color: #333;
+    /* text-decoration: underline; */
+}
+
+/* Course content links (overrides above styling for anything in course page) */
+.course-content a {
+    text-decoration: underline;
+}
+
+
+/* Button general */
+.btn {
+    border-radius: 0;
+}
+
+
+/* Primary main button */
+.btn-primary {
+    background: #003a70;
+}
+
+/* Secondary main button */
+.btn-secondary,
+.btn-default {
+    background: white;
+}
+
+/* More padding added to the cells */
+td {
+    padding: 5px;
+}
+
+/* The entire body */
+#page {
+    margin-top: 0;
+}
+
+/* Header for login page */
+.card-header {
+    background: #003a70;
+    color: white;
+}
+
+
+
+/*===========================
+Nav Menu
+===========================*/
+/* Main nav menu */
+.navbar {
+    /* Made white to remove the transparency */
+    background: #003a70;
+    position: static;
+    padding: 60px 10px 46px 10px;
+    display: flex;
+    align-items: end;
+    color: white;
+    background-image: url(https://moodle.eit.edu.au/theme/classic/custom/elements/eit_logo.png);
+    background-position: 0 6px;
+    background-repeat: no-repeat;
+    background-size: 200px;
+}
+
+/* Navbar grouped items to be made white */
+.navbar span,
+.navbar a,
+.popover-region {
+    /* Text and icons sent to white */
+    color: white;
+}
+
+/* Navbar white colour exemptions */
+.navbar .dropdown-menu-right a,
+.navbar .dropdown-menu-right span {
+    /* Text and icons sent to white */
+    color: initial;
+}
+
+/* Making the logo clickable */
+/*
+.navbar-brand.d-none.d-sm-inline {
+     display: block; */
+/* position: absolute;
+    top: 0;
+    height: 106px;
+    width: 182px;
+}*/
+
+.navbar-brand.d-none.d-sm-inline span {
+    visibility: hidden;
+}
+
+/*===========================
+Quick Selection Menu
+===========================*/
+/* Wrapped menu */
+.quickSelectionMenu {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*===========================
+Course Page Header
+===========================*/
+/* Main header card */
+#page-header .card-body {
+    background: #003a70;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Header breadcrumbs */
+#page-header .card-body a {
+    color: white;
+}
+
+
+/*===========================
+Collapsible Topics
+===========================*/
+/* The entire collapsible topic container */
+.topics .content {
+    margin-bottom: 25px !important;
+}
+
+/* Collapsible topic parent */
+.sectionhead {
+    background: none !important;
+}
+
+/* Collapsible topic */
+.the_toggle {
+    display: block !important;
+    background: rgb(240, 240, 240) !important;
+    padding: 15px 0 15px 105px !important;
+    transition: .3s !important;
+    text-align: left !important;
+}
+
+
+/* New summary text */
+.newSummaryText {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* Collapsible topic hover */
+.the_toggle:hover {
+    filter: brightness(0.9);
+}
+
+/* Collapsible topic text */
+.sectiontoggle.collapsed span {
+    color: #7BA4DB !important;
+}
+
+/* Header text */
+.course-content ul.collapsibletopics li.section .sectionname {
+    /* Header text made blue */
+    color: #003a70 !important;
+}
+
+/* Background image if topic is not collapsed */
+.the_toggle.toggle_closed {
+    background-image: url(https://moodle.eit.edu.au/theme/classic/custom/elements/topic_image_right.png) !important;
+    background-position: 0 -4px !important;
+    background-size: 74px !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Background image if topic is collapsed */
+.the_toggle.toggle_open {
+    background-image: url(https://moodle.eit.edu.au/theme/classic/custom/elements/topic_image_down.png) !important;
+    background-position: 0 -4px !important;
+    background-size: 74px !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Removal of topic summaries */
+/* 
+.summary.summaryalwaysshown {
+    display: none;
+} */
+
+.course-content ul.ctopics li.section .content .toggle span:hover,
+.course-content ul.ctopics li.section .content.sectionhidden .toggle span:hover {
+    color: initial !important;
+}
+
+/* Media queries */
+@media only screen and (max-width: 911px) {
+
+    /* Force images to fit to smaller device */
+    .region-main-content img {
+        max-width: 100% !important;
+    }
+}
+
+
+
+
+
+/*===========================
+Cards
+===========================*/
+/* Card headers */
+.card-body h5 {
+    background: #003a70;
+    background-image: url(https://moodle.eit.edu.au/theme/classic/custom/elements/header_orange_dash.png);
+    background-position: -22px 0;
+    background-repeat: no-repeat;
+    color: white;
+    /* Made the background colour stretch the whole card */
+    display: block !important;
+    padding: 10px 0 10px 26px;
+    /* Bypass the card padding restriction without removing the padding for the rest of the card */
+    margin: -16px -16px 0 -16px;
+    /* Font bolded */
+    font-weight: bold;
+}
+
+/* Hyperlink underlining for main content */
+#region-main a {
+    text-decoration: underline;
+}
+
+/* No hyperlink underlining for buttons within the main content */
+a.btn {
+    text-decoration: none !important;
+}
+
+/*===========================
+Time Zone
+===========================*/
+
+/* Automatically hide the incorrect time zone sticker */
+.timezoneIncorrect {
+    display: none;
+}
+
+/*===========================
+Calendar
+===========================*/
+/* Calendar focused on day */
+.calendarwrapper .today {
+    background: rgba(235, 120, 35, 0.22);
+}
+
+
+
+/*===========================
+Footer
+===========================*/
+footer.bg-dark {
+    background: #003a70 !important;
+}
+
+/*===========================
+Dom Tools
+===========================*/
+.domAdminPanel {
+    background: purple;
+    border-top: 5px solid purple;
+    color: white;
+    /* padding: 8px; */
+    z-index: 9999;
+}
+
+/*===========================
+Stickers
+===========================*/
+/* Inspired from https://birdyoz.github.io/helpers/ui-elements.html */
+
+/* Entire sticker */
+.well.card {
+    border: none;
+}
+
+/* Removal of borders on all EIT stickers */
+.sticker-eit {
+    border: none;
+    font-size: 125%;
+}
+
+/* Think sticker */
+.think.sticker-eit {
+    color: #28a745;
+}
+
+.think.sticker-eit:before {
+    content: "\f0eb";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Read sticker */
+.read.sticker-eit {
+    color: #17a2b8;
+}
+
+.read.sticker-eit:before {
+    content: "\f02d";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Discuss sticker */
+.discuss.sticker-eit {
+    color: #ffc107;
+}
+
+.discuss.sticker-eit:before {
+    content: "\f086";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Activity */
+.activity.sticker-eit {
+    color: #c30;
+}
+
+.activity.sticker-eit:before {
+    content: "\f0ae";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Danger sticker */
+.danger.sticker-eit {
+    color: #d9534f !important;
+}
+
+.danger.sticker-eit:before {
+    content: "\f071";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+
+/* Quiz sticker */
+.quiz.sticker-eit {
+    color: orange;
+}
+
+.quiz.sticker-eit:before {
+    content: "\f0ae";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Assessment sticker */
+.assessment.sticker-eit {
+    color: #15aabf;
+}
+
+.assessment.sticker-eit:before {
+    content: "\f15c";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Pre-recordings sticker */
+.prerecordings.sticker-eit {
+    color: darkred;
+}
+
+.prerecordings.sticker-eit:before {
+    content: "\f03d";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Individual sticker */
+.individual.sticker-eit {
+    color: lightgray;
+}
+
+.individual.sticker-eit:before {
+    content: "\f007";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Group sticker */
+.group.sticker-eit {
+    color: purple;
+}
+
+.group.sticker-eit:before {
+    content: "\f0c0";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Software sticker */
+.software.sticker-eit {
+    color: #df691a;
+}
+
+.software.sticker-eit:before {
+    content: "\f085";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Clipboard sticker */
+.clipboard.sticker-eit {
+    color: pink;
+}
+
+.clipboard.sticker-eit:before {
+    content: "\f46c";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Checklist sticker */
+.checklist.sticker-eit {
+    color: lightblue;
+}
+
+.checklist.sticker-eit:before {
+    content: "\f14a";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Suppresource sticker */
+.suppresource.sticker-eit {
+    color: lightgreen;
+}
+
+.suppresource.sticker-eit:before {
+    content: "\f02e";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/*===========================
+Login Module
+===========================*/
+/* Login module https://html-css-js.com/css/generator/box-shadow/ */
+#page-login-index .card {
+    background: #f8f9fa;
+    box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.61);
+    border: none;
+}
+
+/* Login module heading block */
+#page-login-index h2.card-header.text-center {
+    border-radius: 0;
+}
+
+/* Background image */
+#page-login-index #region-main-box {
+    transition: .1s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* EIT Logo*/
+#page-login-index .forgetpass.mt-3:before {
+    content: url("https://moodle.eit.edu.au/theme/classic/custom/elements/eit_logo_small.png");
+}
+
+/* Footer on Login */
+#page-login-index footer#page-footer {
+    display: none;
+}
+
+
+/*===========================
+Quiz Report
+===========================*/
+/*
+Having question numbers beside the quiz questions when marking.
+*/
+
+table#attempts .cell.c9:before {
+    content: "Q1";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c10:before {
+    content: "Q2";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c11:before {
+    content: "Q3";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c12:before {
+    content: "Q4";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c13:before {
+    content: "Q5";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c14:before {
+    content: "Q6";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c15:before {
+    content: "Q7";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c16:before {
+    content: "Q8";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c17:before {
+    content: "Q9";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c18:before {
+    content: "Q10";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c19:before {
+    content: "Q11";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c20:before {
+    content: "Q12";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c21:before {
+    content: "Q13";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c22:before {
+    content: "Q14";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c23:before {
+    content: "Q15";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c24:before {
+    content: "Q16";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c25:before {
+    content: "Q17";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c26:before {
+    content: "Q18";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c27:before {
+    content: "Q19";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c28:before {
+    content: "Q20";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c29:before {
+    content: "Q21";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c30:before {
+    content: "Q22";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c31:before {
+    content: "Q23";
+    color: #1e1e1e52;
+  }
+  table#attempts .cell.c32:before {
+    content: "Q24";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c33:before {
+    content: "Q25";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c34:before {
+    content: "Q26";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c35:before {
+    content: "Q27";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c36:before {
+    content: "Q28";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c37:before {
+    content: "Q29";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c38:before {
+    content: "Q30";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c39:before {
+    content: "Q31";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c40:before {
+    content: "Q32";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c41:before {
+    content: "Q33";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c42:before {
+    content: "Q34";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c43:before {
+    content: "Q35";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c44:before {
+    content: "Q36";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c45:before {
+    content: "Q37";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c46:before {
+    content: "Q38";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c47:before {
+    content: "Q39";
+    color: #1e1e1e52;
+  }
+  
+  table#attempts .cell.c48:before {
+    content: "Q40";
+    color: #1e1e1e52;
+  }
+
+/* 
+Sticky the names of the users next to the marking report
+*/
+  /* #page-mod-quiz-report .no-overflow>.generaltable {
+    position: inherit;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  #page-mod-quiz-report td, th {
+    margin: 0;
+    white-space: nowrap;
+    border-top-width: 0px;
+  }
+  #page-mod-quiz-report .no-overflow {
+    width: 80%;
+    overflow-x: scroll;
+    margin-left: 17%;
+    overflow-y: visible;
+    padding: 0;
+  }
+  #page-mod-quiz-report .c2 {
+    position: absolute;
+    width: 10em;
+    left: 22%;
+    top: auto;
+    border-top-width: 1px;
+    margin-top: -1px;
+  }
+  #page-mod-quiz-report .header, .cell {
+      height: 55px;
+  } */
+
+
+/*===========================
+Academic Integrity Module
+===========================*/
+/* Sticky */
+.academic-integrity-module {
+    z-index: 0;
+    /* position: absolute; */
+    text-decoration: none !important;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding: 20px 20px 10px 20px;
+    width: 100%;
+    background: #e87722;
+    z-index: 9999;
+    color: white;
+    margin-bottom: 16px;
+}
+
+/* Sticky hover */
+.academic-integrity-module:hover {
+    background: #d27027;
+    color: white;
+}
+
+/*===========================
+Maintenance Mode
+===========================*/
+.maintenance_window {
+    text-align: center;
+    padding-top: 40px;
+    position: fixed;
+    z-index: 99999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('https://moodle.eit.edu.au/theme/classic/custom/elements/rottnest-island-1943994_1920.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.maintenance_window h2 {
+    margin-bottom: 20px;
+}
+
+.maintenance_window h3 {
+    font-size: 130%;
+}
+
+.maintenance_message {
+    background: #003a70;
+    padding: 23px;
+}
+
+.maintenance_window .image_location {
+    color: white;
+    background: lightgray;
+    display: block;
+    background: #003a7059;
+    transition: .3s;
+    position: absolute;
+    bottom: 0;
+    /* margin: 0; */
+    left: 0;
+    padding: 12px;
+    /* border-top-right-radius: 37px; */
+}
+
+.maintenance_window .image_location:hover {
+    text-decoration: none;
+    background: #003a70b3;
+}
+
+
+
+
+
+/*===========================
+Smart Course Nav
+===========================*/
+
+/* Sticky menu button */
+.stickyButton {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  /* Remove the white background */
+  .block.block_course_modulenavigation .content {
+    background: #f8f9fa;
+  }
+  
+  /* Remove the padding on the menu */
+  .block_course_modulenavigation {
+    padding: 0;
+  }
+  
+  .block.block_course_modulenavigation .section {
+  border:none;
+  }
+  
+  .section-group {
+      border: 1px solid rgba(0,0,0,.125);
+  }
+
+/* Back to Course Page Button */
+.backToCoursePage {
+    margin-bottom: 16px;
+}
+
+.backToCoursePage a {
+    padding: 8px;
+    border: 1px solid #333;
+    /* color: #909090 !important; */
+    transition: .2s;
+}
+
+.backToCoursePage a:hover {
+  color: #333;
+  text-decoration: none;
+  background: #e6e6e6d6;
+}
+
+
+
+
+
+
+/*===========================
+Misc + Need to be Amended
+===========================*/
+/* Media queries */
+@media only screen and (max-width: 575px) {
+    /* Force courses to display 100% width */
+    .block_myoverview .dashboard-card-deck .dashboard-card,
+    .block_recentlyaccesseditems .dashboard-card-deck .dashboard-card {
+        width:100%;
+    }
+}
+
+/* Force the attendance module to have the names displaying on page 
+
+Update 01-Dec-2020 - removed as a result of Moodle upgrade fix.
+*/
+/*
+#page-mod-attendance-report .left.headcol {
+    left: 20% !important;
+}
+*/
+
+
+/* Keep the body of a course within mobile constraints */
+.region-main,
+.blockcolumn {
+    width: 100% !important;
+}
+
+/* "Add Submission" made a darker colour (requested by Jacqui 11-Dec-2019) */
+[type="submit"] {
+    background: #003a70;
+    color: white;
+}
+
+[type="submit"]:hover {
+    background: #0e63ae;
+    color: white;
+}
+
+
+/* Search function made white */
+.search-input-wrapper {
+    color: white !important;
+}
+
+/* Highlight the assignment modules and quiz modules */
+.modtype_quiz,
+.modtype_assign {
+    background: rgba(0, 58, 112, 0.05);
+    border-left: 3px solid #e87722;
+}
+
+/* Removal of the border radiuses */
+.card,
+#region-main,
+.form-control,
+button,
+input {
+    border-radius: 0 !important;
+}
+
+/* Greeting added to the logged in user module */
+.myprofileitem.fullname:before {
+    content: "Hi";
+}
+
+
+/* Notification panel made #333 */
+.popover-region-container {
+    color: #333;
+}
+
+/* Hide the messages and notifications button */
+div#nav-notification-popover-container,
+a#message-drawer-toggle-5ddb6eee5dffe5ddb6eee50e1c54 {
+    display: none !important;
+}
+
+
+/* Hide the messaging icon */
+[title="Toggle messaging drawer"] {
+    display: none;
+}
+
+
+/* UTC TimeStamp */
+.utcTimeStamp {
+    text-align: center;
+    display:flex;
+    align-items:center;
+    margin-right: 10px;
+    font-size: 125%;
+}
+
+/* UTC TimeStamp removal */
+@media only screen and (max-width: 573px) {
+    .utcTimeStamp {
+        display: none;
+    }
+}
+
+/* Fix the quiz background colour */
+.formulation.clearfix {
+    background: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0;
+}
+
+/* Remove the quick selection menu on the front page */
+#page-login-index .quickSelectionMenu {
+    display: none;
+}
+
+
+
+/* Resolves the issue from Renee 23-Jan-2020. For  */
+.editing .section .activity .contentwithoutlink, .editing .section .activity .activityinstance {
+    padding-right: initial;
+}
+
+
+/* Show the dropdown link for hidden field more clearly - James M - 11-Dec-2020 */
+.dimmed_text .dropdown-menu a {
+    color: black !important;
+}
+
+/* Increase the dimming of the fields more - James M - 11-Dec-2020 */
+a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.dimmed_text:visited, .dimmed_text, .dimmed_text a, .dimmed_text a:link, .dimmed_text a:visited, .usersuspended, .usersuspended a, .usersuspended a:link, .usersuspended a:visited, .dimmed_category, .dimmed_category a {
+    color: #6c757dc4;
+}
+
+/* Increase the dimming of the gradebook fields more - James M - 23-Dec-2020 */
+span.gradevalue.dimmed_text.gradepass {
+    color: #6c757dc4;
+}
+
+/* Hide the "one click backup" option on imports - requested by Angie 09-Sep-2021 */
+#id_oneclickbackup {
+    display: none;
+}
+
+/* Hide the plain text editor option - not ideal - 06-Dec-2021*/
+#page-user-editor [name="preference_htmleditor"] [value="textarea"] {
+    display: none;
+}
+
+/* Hide the quiz info for quizzes having a password - 08-Dec-2021 */
+/*
+.quizinfo p:nth-of-type(3) {
+    visibility: hidden;
+}
+*/
