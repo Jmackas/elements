@@ -153,9 +153,13 @@ Course page
 /*======================================
 Side left menu
 ======================================*/
+/* Side menu of the course page */
 .drawer-left {
+border-right: 1px solid #dee2e6;
     background: none;
 }
+
+
 
 /*======================================
 Login page
