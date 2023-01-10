@@ -90,7 +90,7 @@ Main navbar
 
 /* All navbar hyperlinks */
 [aria-label="Site navigation"] a {
-    color: white;
+    /* color: white; */
 }
 
 /* Navbar hover */
