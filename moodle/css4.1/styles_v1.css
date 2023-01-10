@@ -1,0 +1,188 @@
+/* 
+Table of contents - EIT Moodle theme override:
+- Universal
+- Main navbar
+
+*/
+/*======================================
+Universal
+======================================*/
+
+body {
+	/* Make the text a bit more standoutish.. */
+    font-weight: 500;
+}
+
+/* Lighter blue colour updates */
+a {
+    color: #407ec9;
+}
+
+/* Darker blue colour updates */
+h1,h2,h3,h4,h5,h6 {
+    color: #003a70;
+}
+
+/* Menu dropdown hover */
+.dropdown-item:hover {
+    background: #003a70;
+}
+
+/* Reduce the font weight */
+h2,h3 {
+    font-weight: 600;
+}
+
+/* Primary button 1 */
+.btn-primary {
+    color: white;
+    background: #003a70;
+    border: 1px solid #003a70;
+}
+
+/* Logo on the top left */
+.navbar-brand {
+    visibility: hidden;
+}
+
+.navbar-brand:before {
+    visibility: visible;
+    content: url('https://jmackas.github.io/elements/moodle/eit_logov2.png');
+}
+
+
+/*======================================
+Main navbar
+======================================*/
+/* Main navbar */
+.navbar {
+    background: #003a70 !important;
+    color: white;
+}
+
+
+
+/* Brand icon on the top left */
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+/* Navbar main links */
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+/* Navbar main active link */
+.navbar-light .navbar-nav .nav-link.active {
+    color: white;
+}
+
+/* Navbar active menu item */
+.moremenu .nav-link.active, .moremenu .nav-link.active:hover {
+    border-bottom-color: #e87722;
+
+}
+
+/* The border between Edit mode and Profile link*/
+.border-left {
+    border-left: 1px solid #407ec9!important;
+}
+
+/* All navbar hyperlinks */
+[aria-label="Site navigation"] a {
+    color: white;
+}
+
+/* Navbar hover */
+[aria-label="Site navigation"] .moremenu .nav-link:hover, [aria-label="Site navigation"] .moremenu .nav-link:focus {
+    color: white !important;
+    background: none !important;
+   /* font-size: 110%; */
+    font-weight: 700; 
+    border-bottom-color: #e87722;
+    transition: .3s;
+}
+
+/* Navbar dropdown icon next to profile icon */
+[aria-label="Site navigation"] .dropdown-toggle::after {
+    color: white;
+}
+
+/*======================================
+Course page 
+======================================*/
+/* Secondary nav menu items */
+.secondary-navigation a {
+    transition: .3s;
+}
+
+
+/* Title of the course page */
+#page-course-view-topics #page-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* links and text within this block */
+.courseindex .courseindex-item .courseindex-link, .courseindex .courseindex-item .courseindex-chevron, .courseindex .courseindex-item.dimmed .courseindex-link, .courseindex .courseindex-item.dimmed .courseindex-chevron {
+    color: black;
+}
+
+
+/*======================================
+Side left menu
+======================================*/
+.drawer-left {
+    background: none;
+}
+
+
+/*======================================
+Login page
+======================================*/
+/* Login page background */
+.pagelayout-login #page {
+    background: url('https://jmackas.github.io/elements/moodle/iStock-1282046119_1920x1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+/* Login title header */
+.login-heading {
+    font-weight: 400;
+    font-size: 1.8em !important;
+    color: #0d3b70;
+}
+
+
+/* Add logo to the login page header */
+.login-container:before {
+    content: url("https://www.eit.edu.au/wp-content/uploads/2022/04/EIT_Logo.webp");
+}
+
+/* Make the logo centred */
+.login-container {
+    text-align: center;
+}
+
+/* Override the rest of the login page to ensure it does not get centred */
+.loginform {
+    text-align: initial;
+}
+
+/*======================================
+Misc / Specific
+======================================*/
+/* Collapsible topic "focus" button - border colour change */
+[role="button"]:focus {
+    box-shadow: 0 0 0 0.2rem #003a70bf;
+}
+
+a.nav-link.active:hover {
+    background: initial;
+}
+
+
+/*===================
+test
+====================*/
