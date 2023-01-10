@@ -112,6 +112,11 @@ Main navbar
     color: white;
 }
 
+/* Make the "Edit mode" white when enabled */
+.editmode-switch-form .text-primary {
+    color: white !important;
+}
+
 /*======================================
 Course page 
 ======================================*/
