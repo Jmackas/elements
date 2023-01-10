@@ -55,7 +55,11 @@ h2,h3 {
 
 .navbar-brand:before {
     visibility: visible;
-    content: url('https://jmackas.github.io/elements/moodle/eit_logov2.png');
+    display: block;
+    content: "";
+    width: 129px;
+    height: 54px;
+    background: transparent url('https://jmackas.github.io/elements/moodle/eit_logov2.png') no-repeat;
 }
 
 /*======================================
@@ -133,7 +137,7 @@ Course page
 
 /* Hover effect for the secondary nav drop downs */
 .secondary-navigation .dropdown-item:hover {
-    background: #407dc8; 
+    background: #407dc8;
 }
 
 /* Title of the course page */
