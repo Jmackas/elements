@@ -90,7 +90,7 @@ Main navbar
     transition: .2s;
 }
 
-.navbar-light:hover .navbar-brand:hover, .navbar-light:focus .navbar-brand:focus {
+.navbar-light:hover .navbar-brand:hover, .navbar-light:focus .navbar-brand:focus, .navbar-light:active .navbar-brand:active {
     color: white;
     transform: translateY(-1px);
 }
