@@ -54,7 +54,6 @@ h2,h3 {
     visibility: hidden;
 }
 */
-
 /*
 .navbar-brand:before {
     visibility: visible;
@@ -65,7 +64,6 @@ h2,h3 {
     background: transparent url('https://jmackas.github.io/elements/moodle/eit_logov2.png') no-repeat;
 }
 */
-
 /*======================================
 Main navbar
 ======================================*/
@@ -120,19 +118,19 @@ Main navbar
     color: white !important;
     background: none !important;
     /* font-size: 110%; */
-/*     font-weight: 700; */
+    /*     font-weight: 700; */
     border-bottom-color: #e87722;
     transition: .3s;
 }
 
 /* Navbar press button */
 .nav-link:focus {
-     transform: translateY(1px);
+    transform: translateY(1px);
 }
 
 /* Notification bell hover */
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-color: lightgray;
+    color: lightgray;
 }
 
 /* Navbar dropdown icon next to profile icon */
@@ -144,8 +142,6 @@ color: lightgray;
 .editmode-switch-form .text-primary {
     color: white !important;
 }
-
-
 
 /*======================================
 Course page 
@@ -177,11 +173,57 @@ Course page
 }
 
 /*======================================
-Side left menu
+Announcements block
 ======================================*/
+/* Reordering the order of the title and data */
+[data-block="news_items"] .post {
+    display: table;
+}
 
+/* New article button */
+[data-block="news_items"] .newlink {
+    float: right;
+    margin-bottom: 10px;
+}
 
+/* Place the title of the article above everything else */
+[data-block="news_items"] .info {
+    display: table-header-group;
+    font-size: 15pt;
+    font-weight: 700
+}
 
+/* Individual article blocks */
+[data-block="news_items"] .post {
+    margin-top: -1px;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+}
+
+/* Put the metadata below everything else */
+[data-block="news_items"] .head {
+    font-size: 13pt;
+    font-weight: 100;
+    display: flex;
+}
+
+/* Put the date after the name of the user */
+[data-block="news_items"] .head .date {
+    padding-right: 5px;
+    border-right: 1px solid #dfdfdf;
+}
+
+/* Put the date before the name of the user */
+[data-block="news_items"] .head .name {
+    margin-left: 5px;
+}
+
+/* Older topics link */
+[data-block="news_items"] .footer {
+    margin-top: 10px;
+}
 
 /*======================================
 Login page
