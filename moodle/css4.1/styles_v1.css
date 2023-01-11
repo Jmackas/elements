@@ -91,7 +91,7 @@ Main navbar
 }
 
 .navbar-light:hover .navbar-brand:hover, .navbar-light:focus .navbar-brand:focus {
-    color: #407dc8;
+    color: white;
     transform: translateY(-1px);
 }
 
