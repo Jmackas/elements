@@ -49,10 +49,13 @@ h2,h3 {
 }
 
 /* Logo on the top left */
+/*
 .navbar-brand {
     visibility: hidden;
 }
+*/
 
+/*
 .navbar-brand:before {
     visibility: visible;
     display: block;
@@ -61,6 +64,7 @@ h2,h3 {
     height: 54px;
     background: transparent url('https://jmackas.github.io/elements/moodle/eit_logov2.png') no-repeat;
 }
+*/
 
 /*======================================
 Main navbar
