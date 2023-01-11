@@ -120,9 +120,14 @@ Main navbar
     color: white !important;
     background: none !important;
     /* font-size: 110%; */
-    font-weight: 700;
+/*     font-weight: 700; */
     border-bottom-color: #e87722;
     transition: .3s;
+}
+
+/* Navbar press button */
+.nav-link:focus {
+     transform: translateY(1px);
 }
 
 /* Notification bell hover */
