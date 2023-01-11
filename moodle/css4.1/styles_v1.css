@@ -85,6 +85,16 @@ Main navbar
     color: white;
 }
 
+/* "Logo" on the left */
+.navbar-light .navbar-brand, .navbar-light .navbar-brand {
+    transition: .2s;
+}
+
+.navbar-light:hover .navbar-brand:hover, .navbar-light:focus .navbar-brand:focus {
+    color: #407dc8;
+    transform: translateY(-1px);
+}
+
 /* Navbar main active link */
 .navbar-light .navbar-nav .nav-link.active {
     color: white;
