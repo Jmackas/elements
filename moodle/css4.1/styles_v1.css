@@ -275,13 +275,12 @@ EIT Admin Tools
     font-weight: 700;
     color: rgb(128 0 128 / 70%);
     font-size: 70%;
-    transform: translate(-9px, -23px);
+    transform: translate(-9px, -13px);
 }
 
 .quickSelectionMenu {
     text-align: center;
 }
-
 
 /*======================================
 Misc / Specific
