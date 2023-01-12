@@ -261,15 +261,21 @@ Login page
 /*======================================
 EIT Admin Tools
 ======================================*/
+/* Admin tools bubble notif */
 .eitAdminTools {
-    border: 1px solid rgb(128 0 128 / 0.5);
-    padding: 1em;
+    border: 1px solid #80008080;
+    padding: 25px 10px 0px 15px;
     border-radius: 0.5em;
     background:rgb(128 0 128 / 0.05);
 }
 
 .eitAdminTools:before {
-    content: 'Hello world';
+    content: 'EIT Admin';
+    position: absolute;
+    font-weight: 700;
+    color: rgb(128 0 128 / 70%);
+    font-size: 70%;
+    transform: translate(-9px, -23px);
 }
 
 
