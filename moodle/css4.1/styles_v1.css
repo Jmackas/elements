@@ -259,6 +259,21 @@ Login page
 }
 
 /*======================================
+EIT Admin Tools
+======================================*/
+.eitAdminTools {
+    border: 1px solid rgb(128 0 128 / 0.5);
+    padding: 1em;
+    border-radius: 0.5em;
+    background:rgb(128 0 128 / 0.05);
+}
+
+.eitAdminTools:before {
+    content: 'Hello world';
+}
+
+
+/*======================================
 Misc / Specific
 ======================================*/
 /* Collapsible topic "focus" button - border colour change */
