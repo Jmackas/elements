@@ -47,7 +47,7 @@ let quizMenuItem = '<a href="https://moodle41-staging.eitidc.com/mod/quiz/index.
 let turnitinMenuItem = '<a href="https://moodle41-staging.eitidc.com/mod/turnitintooltwo/index.php?id=' + currentLocation + '">Turnitin</a>';
 
 // Combine all the menu items
-let quickSelectionMenu = '<div class="eitAdminTools"><div class="quickSelectionMenu">' + '<strong>Quick Selection Menu</strong>' + '<br>' + userMenuItem + gradeMenuItem + assignmentMenuItem + attendanceMenuItem + forumMenuItem + quizMenuItem + turnitinMenuItem + '<br><hr>' + '</div></div>';
+let quickSelectionMenu = '<div class="eitAdminTools"><div class="quickSelectionMenu">' + '<strong>Quick Selection Menu</strong>' + '<br>' + userMenuItem + gradeMenuItem + assignmentMenuItem + attendanceMenuItem + forumMenuItem + quizMenuItem + turnitinMenuItem + '<br>' + '</div></div>';
 
 // Insert the nav menu onto the page
 document.querySelector('#region-main').insertAdjacentHTML('beforebegin', quickSelectionMenu);
