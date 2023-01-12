@@ -274,7 +274,7 @@ EIT Admin Tools
     padding: 1em;
     border-radius: 0.5em;
     background:rgb(128 0 128 / 0.05);
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .eitAdminTools:before {
