@@ -7,8 +7,15 @@ Table of contents - EIT Moodle theme override:
 /*======================================
 Universal
 ======================================*/
+/* Embed font */
+@font-face {
+    font-family: biosansreg;
+    src: url(https://moodle41-staging.eitidc.com/theme/boost/font/flat-it_-_biosans-regular.woff);
+}
+
 body {
     /* Make the text a bit more standoutish.. */
+    font-family: biosansreg;
     font-weight: 500;
 }
 
