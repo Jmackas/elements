@@ -50,6 +50,6 @@ let turnitinMenuItem = '<a href="https://moodle41-staging.eitidc.com/mod/turniti
 let quickSelectionMenu = '<div class="eitAdminTools"><div class="quickSelectionMenu">' + '<strong>Quick Selection Menu</strong>' + '<br>' + userMenuItem + gradeMenuItem + assignmentMenuItem + attendanceMenuItem + forumMenuItem + quizMenuItem + turnitinMenuItem + '<br>' + '</div></div>';
 
 // Insert the nav menu onto the page
-document.querySelector('#page-course-view-topics #region-main').insertAdjacentHTML('beforebegin', quickSelectionMenu);
+document.querySelector('.path-course #region-main').insertAdjacentHTML('beforebegin', quickSelectionMenu);
 
 }
