@@ -180,9 +180,11 @@ Course page
 }
 
 /* Make the disabled sections more hidden */
-.course-section.hidden {
-    opacity: 0.4;
+.course-section.hidden div a {
+    /* opacity: 0.4; */
+    color: #09447866;
 }
+
 
 /*======================================
 Announcements block
