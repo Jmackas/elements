@@ -179,6 +179,11 @@ Course page
     color: black;
 }
 
+/* Make the disabled sections more hidden */
+.course-section.hidden {
+    opacity: 0.4;
+}
+
 /*======================================
 Announcements block
 ======================================*/
