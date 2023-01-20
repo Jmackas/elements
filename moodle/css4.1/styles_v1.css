@@ -180,10 +180,11 @@ Course page
 }
 
 /* Make the disabled sections more hidden */
-.course-section.hidden div a {
+.course-section.hidden div a, .course-section.hidden div h3 {
     /* opacity: 0.4; */
     color: #09447866;
 }
+
 
 
 /*======================================
