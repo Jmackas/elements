@@ -23,4 +23,5 @@ mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42), mat-row.mat-row.cdk-ro
 
 mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42) .mat-cell, mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(43)  .mat-cell {
     color: white;
+    text-shadow: 1px 1px #000000;
 }
