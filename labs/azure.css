@@ -1,27 +1,17 @@
-mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42), mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(43)  {
-  background: linear-gradient(45deg, #330065, #0e5ba3);
-  background-size: 400% 400%;
-  animation: GradientBackground 10s ease infinite;
-
+mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42) {
+    padding: 20px 0;
+    border: 3px solid #004385;
+    background: rgb(0 67 133 / 25%);
 }
 
-@keyframes GradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-} 
-
-
-
-mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42) .mat-cell, mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(43)  .mat-cell {
-    color: white;
-    text-shadow: 1px 1px #000000;
+mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42):before {
+    position: absolute;
+    content: "Azure Lab";
+    transform: translate(-5px, 29px);
+    /*     border: 1px solid #004385; */
+    /* display: block; */
+    padding: 0px 9px;
+    color: #004385;
+    font-size: 0.9em;
+    font-weight: bold;
 }
