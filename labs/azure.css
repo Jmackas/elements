@@ -1,10 +1,11 @@
-mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42) {
+mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42), mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(43) {
     padding: 20px 0;
     border: 3px solid #004385;
     background: rgb(0 67 133 / 25%);
+    margin: -3px 0;
 }
 
-mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42):before {
+mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(42):before, mat-row.mat-row.cdk-row.ng-star-inserted:nth-of-type(43):before {
     position: absolute;
     content: "Azure Lab";
     transform: translate(-5px, 29px);
