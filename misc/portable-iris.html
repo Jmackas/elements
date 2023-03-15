@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen, Webcam, and Audio Recorder</title>
+    <script src="https://cdn.webrtc-experiment.com/MediaRecorder.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+</head>
+<body>
+    <h1>Screen, Webcam, and Audio Recorder</h1>
+    <div>
+        <button id="startBtn">Start Recording</button>
+        <button id="stopBtn" disabled>Stop Recording</button>
+    </div>
+    <video id="screenVideo" width="640" height="480" autoplay muted></video>
+    <video id="webcamVideo" width="320" height="240" autoplay></video>
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const screenVideo = document.getElementById('screenVideo');
+        const webcamVideo = document.getElementById('webcamVideo');
+
+        let screenStream;
+        let webcamStream;
+        let audioStream;
+        let screenRecorder;
+        let webcamRecorder;
+        let audioRecorder;
+        let zip;
+
+        startBtn.addEventListener('click', () => {
+            Promise.all([
+                navigator.mediaDevices.getDisplayMedia({
+                    video: {
+                        width: 640,
+                        height: 480
+                    }
+                }),
+                navigator.mediaDevices.getUserMedia({
+                    video: {
+                        width: 320,
+                        height: 240
+                    },
+                    audio: true
+                })
+            ])
+            .then(([screenStream, webcamStream]) => {
+                audioStream = new MediaStream();
+                [screenStream, webcamStream].forEach(stream => {
+                    stream.getTracks().forEach(track => {
+                        audioStream.addTrack(track.clone());
+                    });
+                });
+
+                screenVideo.srcObject = screenStream;
+                screenVideo.play();
+                webcamVideo.srcObject = webcamStream;
+                webcamVideo.play();
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+
+                // Record both audio and video for screen
+                screenRecorder = RecordRTC([screenStream, audioStream], {
+                    type: 'video'
+                });
+                screenRecorder.startRecording();
+
+                // Record both audio and video for webcam
+                webcamRecorder = RecordRTC([webcamStream, audioStream], {
+                    type: 'video'
+                });
+                webcamRecorder.startRecording();
+
+                // Record audio only
+                audioRecorder = RecordRTC(audioStream, {
+                    type: 'audio'
+                });
+                audioRecorder.startRecording();
+
+                // Create a new zip file for storing recordings
+                zip = new JSZip();
+            });
+        });
+
+        stopBtn.addEventListener('click', () => {
+            // Stop all recorders
+            screenRecorder.stopRecording(() => {
+                const screenBlob = screenRecorder.getBlob();
+                zip.file('screen.webm', screenBlob);
+            });
+            webcamRecorder.stopRecording(() => {
+                const webcamBlob = webcamRecorder.getBlob();
+                zip.file('webcam.webm', webcamBlob);
+            });
+            audioRecorder.stopRecording(() => {
+                const audioBlob = audioRecorder.getBlob();
+                zip.file('audio.wav', audioBlob);
+
+                // Generate a blob URL for the zip file and download it
+                zip.generateAsync({ type: 'blob' })
+                    .then(function (blob) {
+                        saveAs(blob, 'videos.zip');
+// Reset UI
+screenVideo.srcObject = null;
+webcamVideo.srcObject = null;
+startBtn.disabled = false;
+stopBtn.disabled = true;
+});
+});
+});
+</script>
+
+</body>
+</html>
