@@ -244,14 +244,13 @@ Announcements block
 Login page
 ======================================*/
 /* Login page background */
-/*
 .pagelayout-login #page {
     background: url('https://jmackas.github.io/elements/moodle/iStock-1282046119_1920x1280.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
 }
-*/
+
 
 /* Login title header */
 .login-heading {
