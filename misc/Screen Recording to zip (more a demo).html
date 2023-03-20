@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screen Sharing Demo</title>
+  </head>
+  <body>
+    <h1>Screen Sharing Demo</h1>
+    <button id="start-btn">Start Screen Sharing</button>
+    <button id="stop-btn" disabled>Stop Screen Sharing</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/jszip/dist/jszip.min.js"></script>
+    <script>
+      let stream = null; // variable to hold the stream object
+      let recorder = null; // variable to hold the MediaRecorder object
+      let chunks = []; // array to hold the recorded data chunks
+
+      const startBtn = document.getElementById('start-btn');
+      const stopBtn = document.getElementById('stop-btn');
+
+      // Event listener for the start button
+      startBtn.addEventListener('click', async () => {
+        try {
+          stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+          recorder = new MediaRecorder(stream);
+          recorder.ondataavailable = (e) => chunks.push(e.data);
+          recorder.onstop = exportVideo;
+          recorder.start();
+          startBtn.disabled = true;
+          stopBtn.disabled = false;
+        } catch (err) {
+          console.error('Error: ' + err);
+        }
+      });
+
+      // Event listener for the stop button
+      stopBtn.addEventListener('click', () => {
+        recorder.stop();
+        stream.getTracks().forEach((track) => track.stop());
+        startBtn.disabled = false;
+        stopBtn.disabled = true;
+      });
+
+      // Function to export the recorded video as a zip file
+      const exportVideo = async () => {
+        const blob = new Blob(chunks, { type: 'video/webm' });
+        const zip = new JSZip();
+        zip.file('screen-capture.webm', blob);
+        const content = await zip.generateAsync({ type: 'blob' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(content);
+        link.download = 'screen-capture.zip';
+        link.click();
+      };
+    </script>
+  </body>
+</html>
