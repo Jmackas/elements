@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Screen Recording Tool</title>
+  </head>
+  <body>
+    <button onclick="startRecording()">Start Recording</button>
+    <button onclick="stopRecording()">Stop Recording</button>
+    <video id="video" controls></video>
+    <script>
+      let stream, recorder, chunks, video;
+
+      const startRecording = async () => {
+        stream = await navigator.mediaDevices.getDisplayMedia({
+          video: { mediaSource: "screen" },
+        });
+        recorder = new MediaRecorder(stream);
+        chunks = [];
+        recorder.ondataavailable = (e) => chunks.push(e.data);
+        recorder.onstop = (e) => {
+          const completeBlob = new Blob(chunks, { type: chunks[0].type });
+          const videoURL = URL.createObjectURL(completeBlob);
+          video.src = videoURL;
+        };
+        recorder.start();
+      };
+
+      const stopRecording = () => {
+        recorder.stop();
+        stream.getTracks().forEach((track) => track.stop());
+      };
+
+      video = document.getElementById("video");
+    </script>
+  </body>
+</html>
