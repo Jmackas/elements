@@ -245,6 +245,30 @@ Notification bell
     color: black;
 }
 
+@media only screen and (max-width: 1237px) {
+  .navbar .count-container {
+      position: relative;
+      right: -5px;
+      top: 0;
+      border: 1px solid white;
+      /* color: #ca3120; */
+      background: #e87722;
+      padding: 5px;
+      /* height: 25px; */
+  }
+
+    .navbar .count-container:after, .navbar .count-container:before {
+        display: none;
+    }
+
+    
+
+    /* The bell icon for notifications */
+[title="Toggle notifications menu"] {
+    visibility: visible;
+}
+}
+
 
 /*======================================
 Course page 
