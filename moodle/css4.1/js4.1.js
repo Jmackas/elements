@@ -6,6 +6,7 @@ if (document.querySelector('[data-key="siteadminnode"]')) {
     }
 }
 
+
 /*============================================
 Quick selection menu
 A tool LSO's leverage to access various resources quickly.
@@ -46,4 +47,16 @@ function quickSelectionMenu() {
     // Insert the nav menu onto the page
     document.querySelector('.path-course #region-main').insertAdjacentHTML('beforebegin', quickSelectionMenu);
 
+}
+
+/*============================================
+Redirect to Dashboard
+If a user navigates to the home page, then redirect to the dashboard.
+/*============================================*/
+function redirectToDashboard() {
+    // Check if on the dashboard
+    if (document.getElementById("page-site-index")) {
+        // If not on the dashboard, then redirect to dashboard
+        window.location.href = "https://moodle41-staging.eitidc.com/my/";
+    }
 }
