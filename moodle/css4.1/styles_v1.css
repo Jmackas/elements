@@ -179,7 +179,7 @@ Notification bell
 
 /* Main count container for the notification bell - hover */
 .navbar .count-container:hover {
-    background: white;
+    background: white !important;
     color: #e87722;
     border: 1px solid #e87722;;
 }
