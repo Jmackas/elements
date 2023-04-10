@@ -203,6 +203,58 @@ Course page
 
 
 
+
+
+
+
+
+
+
+/*======================================
+Highlighted course block
+======================================*/
+
+/* Removal of the left banner highlight */
+.course-content .current::before {
+    border-left: none;
+}
+
+/* Section */
+.course-section.current.section {
+    padding: 0 !important;
+}
+
+/* Section header */
+.current .course-section-header {
+    padding: 1em;
+    color: white;
+    background: #e87722;
+}
+
+
+/* Title of section */
+.section.current h3 {
+    font-weight: normal;
+    color: white;
+}
+
+/* Hide the "highlighted" mention */
+.section.current [data-region="sectionbadges"] {
+    display: none !important;
+}
+
+/* Section dropdown arrow */
+.section.current div span {
+    color: white;
+}
+
+/* Section dropdown arrow hover and focus */
+.section.current [data-toggle="collapse"]:hover, .section.current [data-toggle="collapse"]:focus {
+    background: none;
+}
+
+
+
 /*======================================
 Announcements block
 ======================================*/
