@@ -150,6 +150,12 @@ Main navbar
     color: white !important;
 }
 
+/* Toggle "edit mode" colour https://app.clickup.com/t/865bf76aw */
+.custom-control-input:checked~.custom-control-label::before {
+    background: #e87722;
+    border-color: #e87722;
+}
+
 /* Main menu nav icon in mobile */
 .navbar-light .navbar-toggler-icon {
     background-image: url(https://jmackas.github.io/elements/moodle/main-menu-icon-mobile.png);
