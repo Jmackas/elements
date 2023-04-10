@@ -56,11 +56,11 @@ Redirect to Dashboard
 If a user navigates to the home page, then redirect to the dashboard.
 /*============================================*/
 function redirectToDashboard() {
+            // Hide the home button
+        document.querySelector('.primary-navigation [data-key="home"]').style.display = "none";
     // Check if on the dashboard
     if (document.getElementById("page-site-index")) {
         // If not on the dashboard, then redirect to dashboard
         window.location.href = "https://moodle41-staging.eitidc.com/my/";
-        // Hide the home button
-        document.querySelector('.primary-navigation [data-key="home"]').style.display = "none";
     }
 }
