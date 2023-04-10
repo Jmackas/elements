@@ -136,11 +136,6 @@ Main navbar
     transform: scale(1.02);
 }
 
-/* Notification bell hover */
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-    color: lightgray;
-}
-
 /* Navbar dropdown icon next to profile icon */
 [aria-label="Site navigation"] .dropdown-toggle::after {
     color: white;
@@ -160,6 +155,33 @@ Main navbar
 /* Main menu nav icon in mobile */
 .navbar-light .navbar-toggler-icon {
     background-image: url(https://jmackas.github.io/elements/moodle/main-menu-icon-mobile.png);
+}
+
+/*======================================
+Notifications bell
+======================================*/
+/* Notification bell hover */
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: lightgray;
+}
+
+.all-notifications {
+    color: black;
+    transition: .3s;
+}
+
+.content-item-container.unread {
+      transition: .2s;
+}
+
+.all-notifications .content-item-container.unread:hover {
+    color: black;
+    background: #f4f4f4;
+    border-left: 4px solid #e87722;
+}
+
+.all-notifications .content-item-container:hover .content-item-footer .timestamp, .view-more {
+    color: black;
 }
 
 /*======================================
