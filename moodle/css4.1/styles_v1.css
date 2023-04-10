@@ -63,8 +63,8 @@ h2,h3 {
 .navbar-brand:before {
     visibility: visible;
     width: 100px;
-    height: 52px;
-    content:url("https://jmackas.github.io/elements/moodle/eit_logov3.png");
+    height: 45px;
+    content:url("https://jmackas.github.io/elements/moodle/eit_logov4.png");
 }
 
 /*======================================
