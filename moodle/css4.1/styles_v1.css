@@ -245,6 +245,11 @@ Notification bell
     color: black;
 }
 
+/* Maintain the black colour for the notifications */
+.content-item-container.notification:hover, .content-item-container:hover .content-item-footer .timestamp {
+    color: black;
+}
+
 @media only screen and (max-width: 1237px) {
   .navbar .count-container {
       position: relative;
