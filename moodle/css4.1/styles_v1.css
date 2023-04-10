@@ -246,7 +246,7 @@ Notification bell
 }
 
 /* Maintain the black colour for the notifications */
-.content-item-container.notification:hover, .content-item-container:hover .content-item-footer .timestamp {
+.content-item-container.notification:hover, .content-item-container:hover .content-item-footer .timestamp, .content-item-container.selected, .content-item-container.selected .content-item-footer .timestamp {
     color: black;
 }
 
