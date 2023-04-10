@@ -244,7 +244,7 @@ Highlighted course block
 }
 
 /* Section dropdown arrow */
-.section.current div span {
+.section.current div .collapsed-icon span {
     color: white;
 }
 
