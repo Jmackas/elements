@@ -1,9 +1,3 @@
-/* 
-Quick selection menu
-
-*/
-
-quickSelectionMenu();
 
 
 
@@ -12,10 +6,18 @@ quickSelectionMenu();
 
 /*============================================
 Quick selection menu
-
-A tool LSO's leverage to access resources quickly.
-
+A tool LSO's leverage to access various resources quickly.
 /*============================================*/
+/* 
+Invoke the script
+*/
+if (document.querySelector('.path-course')) {
+  quickSelectionMenu();
+}
+
+
+
+
 function quickSelectionMenu() {
 
 // Get URL of the Moodle Course
