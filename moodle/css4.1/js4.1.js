@@ -1,6 +1,5 @@
-
 // If "EIT Admin mode"
-if (window.location.href.indexOf("https://moodle41-staging.eitidc.com/admin/search.php") != -1) {
+if (document.querySelector('[data-key="siteadminnode"]')) {
     // quickSelectionMenu
     if (document.querySelector('.path-course')) {
         quickSelectionMenu();
