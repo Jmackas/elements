@@ -170,11 +170,11 @@ Notifications bell
     transition: .3s;
 }
 
-.content-item-container.unread {
+.content-item-container {
       transition: .2s;
 }
 
-.all-notifications .content-item-container.unread:hover {
+.all-notifications .content-item-container:hover {
     color: black;
     background: #f4f4f4;
     border-left: 4px solid #e87722;
