@@ -56,21 +56,17 @@ h2,h3 {
 }
 
 /* Logo on the top left */
-/*
 .navbar-brand {
     visibility: hidden;
 }
-*/
-/*
+
 .navbar-brand:before {
     visibility: visible;
-    display: block;
-    content: "";
-    width: 129px;
-    height: 54px;
-    background: transparent url('https://jmackas.github.io/elements/moodle/eit_logov2.png') no-repeat;
+    width: 100px;
+    height: 52px;
+    content:url("https://jmackas.github.io/elements/moodle/eit_logov3.png");
 }
-*/
+
 /*======================================
 Main navbar
 ======================================*/
