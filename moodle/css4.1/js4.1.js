@@ -4,6 +4,8 @@ if (document.querySelector('[data-key="siteadminnode"]')) {
     if (document.querySelector('.path-course')) {
         quickSelectionMenu();
     }
+} else {
+    redirectToDashboard()
 }
 
 
