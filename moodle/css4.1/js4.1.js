@@ -8,6 +8,8 @@ if (document.querySelector('[data-key="siteadminnode"]')) {
     redirectToDashboard()
 }
 
+countOutstandingNotifs();
+
 
 /*============================================
 Quick selection menu
@@ -63,4 +65,15 @@ function redirectToDashboard() {
         // If not on the dashboard, then redirect to dashboard
         window.location.href = "https://moodle41-staging.eitidc.com/my/";
     }
+}
+
+/*============================================
+Hide notification highlight if 0 notifs
+If there are no unread notifications for users, then the button will be made blue
+/*============================================*/
+function countOutstandingNotifs() {
+    const countOutstandingNotifs = document.querySelector('.count-container');
+if (countOutstandingNotifs.innerText.trim() === '0') {
+  countOutstandingNotifs.style.background = '#003a70';
+}
 }
