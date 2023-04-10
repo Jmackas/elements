@@ -80,6 +80,11 @@ Main navbar
     color: white;
 }
 
+/* Ensure all buttons are coloured white https://app.clickup.com/t/860pgpqj5 */
+.navbar .btn {
+ color: white;  
+}
+
 /* Brand icon on the top left */
 .navbar-light .navbar-brand {
     color: white;
