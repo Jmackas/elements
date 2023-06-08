@@ -1,7 +1,7 @@
 // If permission is LSO or higher (someone with Site Admin access)
 if (document.querySelector('[data-key="siteadminnode"]')) {
     // quickSelectionMenu
-    if (document.querySelector('.path-course')) {
+    if (document.querySelector('.format-topics')) {
         quickSelectionMenu();
     }
 } else {
