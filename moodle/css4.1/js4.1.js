@@ -49,7 +49,7 @@ function quickSelectionMenu() {
     let quickSelectionMenu = '<div class="eitAdminTools"><div class="quickSelectionMenu">' + '<strong>Quick Selection Menu</strong>' + '<br>' + userMenuItem + gradeMenuItem + assignmentMenuItem + attendanceMenuItem + forumMenuItem + quizMenuItem + turnitinMenuItem + '<br>' + '</div></div>';
 
     // Insert the nav menu onto the page
-    document.querySelector('.path-course #region-main').insertAdjacentHTML('beforebegin', quickSelectionMenu);
+    document.querySelector('#region-main').insertAdjacentHTML('beforebegin', quickSelectionMenu);
 
 }
 
