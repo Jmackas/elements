@@ -9,7 +9,7 @@ Universal
 /* Embed font */
 @font-face {
     font-family: biosansreg;
-    src: url(https://moodlestaging.eit.edu.au/theme/boost/font/flat-it_-_biosans-regular.woff);
+    src: url(https://moodlestaging.eit.edu.au/theme/boost/fonts/flat-it_-_biosans-regular.woff);
 }
 
 body {
