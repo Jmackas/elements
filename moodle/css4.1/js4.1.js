@@ -1,9 +1,15 @@
 // If permission is LSO or higher (someone with Site Admin access)
 if (document.querySelector('[data-key="siteadminnode"]')) {
-    // quickSelectionMenu
+    // If on a course page
     if (document.querySelector('.format-topics')) {
         quickSelectionMenu();
     }
+    
+    // If on the "my courses" view
+    if (document.querySelector('.page-mycourses')) {
+        myCoursesAmendedView();
+    }
+    
 } else {
     redirectToDashboard()
 }
@@ -52,6 +58,46 @@ function quickSelectionMenu() {
     document.querySelector('#region-main').insertAdjacentHTML('beforebegin', quickSelectionMenu);
 
 }
+
+/*============================================
+My Courses view
+Changes the view of the course layout for admin mode users. Requested by Lucy.
+/*============================================*/
+function myCoursesAmendedView() {
+    document.head.insertAdjacentHTML(
+    "beforeend",
+    `
+
+<head><style>
+
+/* Hide the thumbnails of the courses */
+.page-mycourses .col-md-2.d-flex.align-items-center.mb-sm-3.mb-md-0 {
+    display: none !important;
+}
+
+/* Hide the category of the course */
+.page-mycourses .text-muted.muted.d-flex.flex-wrap {
+    display: none !important;
+}
+
+
+/* Add some padding between the course names and remove the border */
+.page-mycourses .list-group-item {
+    padding: 3px;
+    border: none;
+
+}
+
+
+
+</style></head>
+
+`
+    );
+    
+    
+}
+
 
 /*============================================
 Redirect to Dashboard
