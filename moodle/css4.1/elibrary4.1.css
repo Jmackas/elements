@@ -1,1 +1,568 @@
+/*========================================
+Universal
+=======================================*/
+/* Class to tackle the float issue */
+.no-overflow {
+    clear: both;
+}
+
+/* Flexbox */
+.invoke-flex {
+    display: flex;
+}
+
+/* Center the flexbox */
+.flex-center {
+    justify-content: center;
+}
+
+/*========================================
+Homepage
+=======================================*/
+
+
+/* Title */
+.headertwo--style {
+    color: rgb(74,143,225);
+    text-align: center;
+    /* font-weight: 500; */
+}
+
+.headerthree--style {
+    font-weight: bold;
+    color: #003a70;
+}
+
+/* Homepage blocks */
+.libblocks {
+}
+
+/* Each row within the block */
+.libblocks__row {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+/* Each individual element within homepage block */
+.libblocks__indiv {
+    width: calc(100% / 3);
+    margin: 5px;
+}
+
+/* Hyperlinks of the blocks */
+.libblocks a {
+    text-decoration: none !important;
+}
+
+/* Library Collection block */
+.libblocks--librarycoll {
+    background: #f2f2f2 url('https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/Icon_Library_Collections.png');
+}
+
+/* Academic Integrity block */
+.libblocks--academicintegrity {
+    background: #f2f2f2 url('https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/Icon_Academic_Integrity.png');
+}
+
+/* Remote Labs block */
+.libblocks--remotelabs {
+    background: #f2f2f2 url('https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/Icon_Remote_Labs.png');
+}
+
+/* Study and Research block */
+.libblocks--studyandresearch {
+    background: #f2f2f2 url('https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/Icon_Study_and_Research.png');
+}
+
+/* Referencing block */
+.libblocks--referencing {
+    background: #f2f2f2 url('https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/Icon_Referencing.png');
+}
+
+/* Help block */
+.libblocks--help {
+    background: #f2f2f2 url('https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/Icon_Help.png');
+}
+
+/* All individual blocks */
+.libblocks--librarycoll, .libblocks--academicintegrity, .libblocks--remotelabs, .libblocks--studyandresearch, .libblocks--referencing, .libblocks--help {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: flex-end;
+    background-size: 100px;
+    background-position: 50% 18%;
+    background-repeat: no-repeat;
+    color: #e87722;
+    font-size: 104%;
+    padding: 0 0 5px 0;
+    font-weight: bold;
+    transition: .2s;
+}
+
+/* All individual blocks - hover */
+.libblocks--librarycoll:hover, .libblocks--academicintegrity:hover, .libblocks--remotelabs:hover, .libblocks--studyandresearch:hover, .libblocks--referencing:hover, .libblocks--help:hover {
+    filter: saturate(150%);
+    color: #e87722;
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 1213px) {
+    /* Stack the blocks when the screen size is small enough */
+    .libblocks__row {
+        display: block;
+    }
+
+    .libblocks__row a {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*========================================
+Library Collections
+=======================================*/
+.header--quote {
+    font-style: italic;font-size: 150%;text-align: left;
+}
+
+/* Homepage blocks */
+.libcollblocks {
+    clear: both;
+}
+
+/* All individual blocks */
+.libcollblocks__blockone, .libcollblocks__blocktwo, .libcollblocks__blockthree, .libcollblocks__blockfour, .libcollblocks__blockfive  {
+    float: left;
+    width: 18%;
+    margin: 0 1%;
+}
+
+/* Lightgray border around blocks */
+.libcollblocks--border {
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+/* All logos */
+.libcollblocks .libcollblocks__logo {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Logo general */
+.libcollblocks__logo--height {
+    height: 100px;
+    padding: 10px;
+}
+
+/* Block text general */
+.libcollblocks .libcollblocks__text {
+    padding: 6px;
+    height: 500px;
+}
+
+/* Logo Knovel */
+.libcollblocks__blockone .libcollblocks--knovel {
+    background-image: url("https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/knovel_icon.png");
+    
+}
+
+/* Logo IEE */
+.libcollblocks__blocktwo .libcollblocks--ieee {
+    background-image: url("https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/ieee_icon.png");
+}
+
+/* Logo Open Access */
+.libcollblocks__blockthree .libcollblocks--openaccess {
+    background-image: url("https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/openaccess_icon.png");
+}
+
+/* Logo IDC */
+.libcollblocks__blockfour .libcollblocks--idc {
+    background-image: url("https://moodle.eit.edu.au/theme/classic/custom/elements/library_overhaul/idctechnologies_icon.png");
+}
+
+/* Logo i2i */
+.libcollblocks__blockfive .libcollblocks--itwoi {
+    background-image: url("https://moodle.eit.edu.au/theme/classic/custom/elements/i2i.jpg");
+    background-size: contain;
+}
+
+
+
+
+/* Main register button */
+.libcollblocks__button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main register button hover */
+.libcollblocks__button:hover {
+    text-decoration: none;
+    color: white;
+    filter: saturate(150%);
+}
+
+/* Button Orange */
+.libcollblocks .bttn-orange {
+    background: #e87722;
+}
+
+/* Button IEEE */
+.libcollblocks .bttn-darkblue {
+    background: #003a70;
+}
+
+/* Button Open Access */
+.libcollblocks .bttn-lightblue {
+    background: #407ec9;
+}
+
+/* Button IDC */
+.libcollblocks .bttn-bttngrey {
+    background: #7f7f7f;
+}
+
+/* Button i2i */
+.libcollblocks .bttn-bttnwhite {
+    background: white;
+    border: 1px solid black;
+    color: black;
+}
+/* Remove the hyperlinks from libcollblocks */
+#region-main .libcollblocks a {
+    text-decoration: none;
+}
+
+/* Media queries */
+@media only screen and (max-width: 1347px) {
+    /* Stack the blocks when the screen size is small enough */ /* All individual blocks */ .libcollblocks__blockone, .libcollblocks__blocktwo, .libcollblocks__blockthree, .libcollblocks__blockfour, .libcollblocks__blockfive {
+        float: none;
+        width: 99%;
+        margin-bottom: 10px;
+    }
+
+    /* Block text general */
+    .libcollblocks .libcollblocks__text {
+        height: 250px;
+    }
+}
+
+
+/*========================================
+Open Access blocks
+=======================================*/
+/* Open access main blocks */
+.open-access.custom-blocks div {
+    display: flex;
+}
+
+/* Open access each individual block*/
+.open-access.custom-blocks a {
+    display: flex;
+    width: 50%;
+    text-decoration: none !important;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.open-access.custom-blocks a {
+    background-position: center;
+    color: orange;
+    width: 30%;
+    padding: 10px;
+    font-size: 150%;
+    margin: 3px;
+}
+
+.open-access.custom-blocks a:hover {
+    filter: saturate(150%);
+}
+
+.open-access.custom-blocks .mechanical {
+    background-image: url("https://i.imgur.com/BXtoaBH.jpg");
+    justify-content: flex-end;
+}
+
+.open-access.custom-blocks .civil-structural {
+    background-image: url("https://i.imgur.com/hrJwPXl.jpg");
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.open-access.custom-blocks .industrial-automation {
+    background-image: url("https://i.imgur.com/8SWejcc.jpg");
+    /* justify-content: space-evenly; */
+    align-items: flex-end;
+}
+
+.open-access.custom-blocks .electrical {
+    background-image: url("https://i.imgur.com/G7ei6Cv.jpg");
+}
+
+
+/*========================================
+EIT Student Thesis Papers V2
+=======================================*/
+.cmid-284202 #region-main p {
+    display: inline;
+}
+
+/* Student thesis papers - each hyperlink */
+.cmid-284202 #region-main a {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #407ec9;
+    font-weight: bolder;
+    font-size: 57px;
+    width: 200px;
+    height: 190px;
+    border: 6px #003a70 solid;
+    margin: 10px;
+}
+
+/* Student thesis papers - each hyperlink - hover */
+.cmid-284202 #region-main a:hover {
+    background: rgb(64 126 201 / 15%);
+}
+
+/* Student thesis papers - each hyperlink - focus */
+.cmid-284202 #region-main a:focus {
+    box-shadow: none;
+}
+
+
+
+
+/*========================================
+Study and Research
+=======================================*/
+/* Header cell */
+.stackedrows_headerrow {
+    width: 20%;
+    padding: 10px;
+}
+
+/* Content cell */
+.stackedrows_contentrow {
+    width: 80%;
+    padding: 10px;
+}
+
+/* All hyperlinks within these blocks */
+.stackedrows a {
+    text-decoration: none !important;
+    transition: .2s;
+}
+
+
+/* All hyperlinks hover within these blocks */
+.stackedrows a:hover {
+    color: initial;
+    filter: saturate(150%);
+}
+
+/* Row right content */
+.stackedrows_contentleft, .stackedrows_headerright {
+    text-align: right;
+}
+
+/* All header blocks */
+.background--darkblue, .background--orange, .background--lightblue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 160%;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+/* Header blue background */
+.stackedrows .background--darkblue {
+    background: #003a70;
+}
+
+/* Header orange background */
+.stackedrows .background--orange {
+    background: #e87722;
+}
+
+/* Header lightblue background */
+.stackedrows .background--lightblue {
+    background: #407ec9;
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 1080px) {
+    /* Header cell */ 
+    .stackedrows_headerrow {
+        width: 40%;
+
+    }
+
+    /* Content cell */
+    .stackedrows_contentrow {
+        width: 60%;
+
+    }
+}
+
+
+
+
+
+/*========================================
+Customised Accordion
+=======================================*/
+.custom-accordion {
+    background-color: rgb(246, 246, 246);
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.custom-accordion:hover, .custom-accordion:focus, .custom-accordion:active {
+    background: #eee !important;
+    color: #333 !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+}
+
+
+
+
+
+
+/*========================================
+IDC Manual View
+=======================================*/
+iframe.library-ebooks {
+    width: 100%;
+    border:none;
+    height: 790px;
+}
+
+
+/*========================================
+Contact Form
+=======================================*/
+.contact-form.library-support {
+    width: 100%;
+    border: none;
+    height: 1000px;
+}
+
+
+/*========================================
+Old Library Alert
+=======================================*/
+/* Library alert banner */
+.new-library-alert {
+	z-index: 99999;
+	background: rgb(232,119,34);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-radius: 0;
+	padding: 42px;
+	margin: 0;
+	transition: background-color .3s ease-in-out,color .3s ease-in-out;
+}
+
+/* Library alert banner specifically */
+a.new-library-alert {
+        text-decoration: none !important;
+}
+
+/* Library alert paragraph text */
+.new-library-alert p {
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	margin:0;
+}
+
+/* Library alert hover effect */
+.new-library-alert:hover {
+	background: #0d3b70;
+}
+
+
+
+
+
+/*========================================
+Misc Items
+=======================================*/
+/* Media queries */
+@media only screen and (max-width: 1128px) {
+   /* Hide the "Academic Integrity" Apple */
+.hide-image img {
+    display: none;
+    }
+}
+
+
+
+/*========================================
+2023-01-16 - IEEE Addition from James M
+=======================================*/
+
+.libcollblocks .row-1, .libcollblocks .row-2 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.libcollblocks__blockone, .libcollblocks__blocktwo, .libcollblocks__blockthree, .libcollblocks__blockfour, .libcollblocks__blockfive {
+    width: 20%;
+}
+
+.libcollblocks__logo.libcollblocks__logo--height.libcollblocks--border.libcollblocks--ieee {
+    background-image: url(https://liberconference.eu/wp-content/uploads/2019/04/IEEE-XploreDigitalLibrary.jpg);
+    background-size: 90%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .libcollblocks .row-1, .libcollblocks .row-2 {
+        display: initial;
+    }
+
+    .libcollblocks__blockone, .libcollblocks__blocktwo, .libcollblocks__blockthree, .libcollblocks__blockfour, .libcollblocks__blockfive {
+        width: 100%;
+    }
+}
+
+.libcollblocks .libcollblocks__text {
+    height: initial;
+    min-height: 400px;
+}
+
+
+
+
+
 
