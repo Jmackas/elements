@@ -314,6 +314,26 @@ Course page
 }
 
 
+/*======================================
+Activity modules
+======================================*/
+/* Reduce the activity size */
+.activity-item {
+    padding: 5px !important;
+    border: none;
+}
+
+/* Reduce the activity container size */
+.activityiconcontainer {
+    width: 35px;
+    height: 35px;
+}
+
+/* Reduce the activity icon size */
+.activityiconcontainer .activityicon, .activityiconcontainer .icon {
+    width: 18px;
+}
+
 
 
 
