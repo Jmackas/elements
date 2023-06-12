@@ -500,6 +500,32 @@ EIT Admin Tools
 }
 
 /*======================================
+Maintenance mode message
+======================================*/
+.maintenanceStickyNotice {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    color: #856404;
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    transition: .2s;
+    border-radius: .5rem;
+}
+
+.maintenanceStickyNotice:hover {
+    color: initial;
+    text-decoration: none;
+    background: rgb(255 236 175);
+    border: 1px solid #ffe492;
+}
+
+.maintenanceStickyNotice u {
+    font-size: 90%;
+}
+
+/*======================================
 Misc / Specific
 ======================================*/
 /* Collapsible topic "focus" button - border colour change */
