@@ -488,6 +488,7 @@ a.nav-link.active:hover {
     background: initial;
 }
 
-/*===================
-test
-====================*/
+/* Hide the strange dividers on the main banner https://app.clickup.com/t/860r2k0b6 */
+#usernavigation .divider.border-left {
+    display: none;
+}
