@@ -6,6 +6,9 @@ Table of contents - EIT Moodle theme override:
 /*======================================
 Universal
 ======================================*/
+/* EIT Library styles */
+@import url("https://moodle.eit.edu.au/theme/classic/custom/library_overhaul.css");
+
 /* Embed font */
 @font-face {
     font-family: biosansreg;
