@@ -7,7 +7,7 @@ Table of contents - EIT Moodle theme override:
 Universal
 ======================================*/
 /* EIT Library styles */
-@import url("https://moodle.eit.edu.au/theme/classic/custom/library_overhaul.css");
+@import url("https://jmackas.github.io/elements/moodle/css4.1/elibrary4.1.css");
 
 /* Embed font */
 @font-face {
