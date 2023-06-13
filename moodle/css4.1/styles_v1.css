@@ -338,6 +338,176 @@ Activity modules
 
 
 
+/*===========================
+Stickers
+===========================*/
+/* Inspired from https://birdyoz.github.io/helpers/ui-elements.html */
+
+/* Entire sticker */
+.well.card {
+    border: none;
+}
+
+/* Removal of borders on all EIT stickers */
+.sticker-eit {
+    border: none;
+    font-size: 125%;
+}
+
+/* Think sticker */
+.think.sticker-eit {
+    color: #28a745;
+}
+
+.think.sticker-eit:before {
+    content: "\f0eb";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Read sticker */
+.read.sticker-eit {
+    color: #17a2b8;
+}
+
+.read.sticker-eit:before {
+    content: "\f02d";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Discuss sticker */
+.discuss.sticker-eit {
+    color: #ffc107;
+}
+
+.discuss.sticker-eit:before {
+    content: "\f086";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Activity */
+.activity.sticker-eit {
+    color: #c30;
+}
+
+.activity.sticker-eit:before {
+    content: "\f0ae";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Danger sticker */
+.danger.sticker-eit {
+    color: #d9534f !important;
+}
+
+.danger.sticker-eit:before {
+    content: "\f071";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+
+/* Quiz sticker */
+.quiz.sticker-eit {
+    color: orange;
+}
+
+.quiz.sticker-eit:before {
+    content: "\f0ae";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Assessment sticker */
+.assessment.sticker-eit {
+    color: #15aabf;
+}
+
+.assessment.sticker-eit:before {
+    content: "\f15c";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Pre-recordings sticker */
+.prerecordings.sticker-eit {
+    color: darkred;
+}
+
+.prerecordings.sticker-eit:before {
+    content: "\f03d";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Individual sticker */
+.individual.sticker-eit {
+    color: lightgray;
+}
+
+.individual.sticker-eit:before {
+    content: "\f007";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Group sticker */
+.group.sticker-eit {
+    color: purple;
+}
+
+.group.sticker-eit:before {
+    content: "\f0c0";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Software sticker */
+.software.sticker-eit {
+    color: #df691a;
+}
+
+.software.sticker-eit:before {
+    content: "\f085";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Clipboard sticker */
+.clipboard.sticker-eit {
+    color: pink;
+}
+
+.clipboard.sticker-eit:before {
+    content: "\f46c";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Checklist sticker */
+.checklist.sticker-eit {
+    color: lightblue;
+}
+
+.checklist.sticker-eit:before {
+    content: "\f14a";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
+
+/* Suppresource sticker */
+.suppresource.sticker-eit {
+    color: lightgreen;
+}
+
+.suppresource.sticker-eit:before {
+    content: "\f02e";
+    font: normal normal normal 23px/1 FontAwesome;
+    padding-right: 7px;
+}
 
 
 
