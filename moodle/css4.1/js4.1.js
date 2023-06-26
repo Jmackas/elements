@@ -31,25 +31,25 @@ function quickSelectionMenu() {
     currentLocation = currentLocation.split(' ')[0];
 
     // Create the "users" menu item
-    let userMenuItem = '<a href="https://moodlestaging.eit.edu.au/user/index.php?id=' + currentLocation + '">Users</a> | ';
+    let userMenuItem = '<a href="https://moodle.eit.edu.au/user/index.php?id=' + currentLocation + '">Users</a> | ';
 
     // Create the "grades" menu item
-    let gradeMenuItem = '<a href="https://moodlestaging.eit.edu.au/grade/report/index.php?id=' + currentLocation + '">Grades</a> | ';
+    let gradeMenuItem = '<a href="https://moodle.eit.edu.au/grade/report/index.php?id=' + currentLocation + '">Grades</a> | ';
 
     // Create the "attendance" menu item
-    let assignmentMenuItem = '<a href="https://moodlestaging.eit.edu.au/mod/assign/index.php?id=' + currentLocation + '">Assignments</a> | ';
+    let assignmentMenuItem = '<a href="https://moodle.eit.edu.au/mod/assign/index.php?id=' + currentLocation + '">Assignments</a> | ';
 
     // Create the "attendance" menu item
-    let attendanceMenuItem = '<a href="https://moodlestaging.eit.edu.au/mod/attendance/index.php?id=' + currentLocation + '">Attendance</a> | ';
+    let attendanceMenuItem = '<a href="https://moodle.eit.edu.au/mod/attendance/index.php?id=' + currentLocation + '">Attendance</a> | ';
 
     // Create the "forum" menu item
-    let forumMenuItem = '<a href="https://moodlestaging.eit.edu.au/mod/forum/index.php?id=' + currentLocation + '">Forum</a> | ';
+    let forumMenuItem = '<a href="https://moodle.eit.edu.au/mod/forum/index.php?id=' + currentLocation + '">Forum</a> | ';
 
     // Create the "quizzes" menu item
-    let quizMenuItem = '<a href="https://moodlestaging.eit.edu.au/mod/quiz/index.php?id=' + currentLocation + '">Quizzes</a> | ';
+    let quizMenuItem = '<a href="https://moodle.eit.edu.au/mod/quiz/index.php?id=' + currentLocation + '">Quizzes</a> | ';
 
     // Create the "Turnitin" menu item
-    let turnitinMenuItem = '<a href="https://moodlestaging.eit.edu.au/mod/turnitintooltwo/index.php?id=' + currentLocation + '">Turnitin</a>';
+    let turnitinMenuItem = '<a href="https://moodle.eit.edu.au/mod/turnitintooltwo/index.php?id=' + currentLocation + '">Turnitin</a>';
 
     // Combine all the menu items
     let quickSelectionMenu = '<div class="eitAdminTools"><div class="quickSelectionMenu">' + '<strong>Quick Selection Menu</strong>' + '<br>' + userMenuItem + gradeMenuItem + assignmentMenuItem + attendanceMenuItem + forumMenuItem + quizMenuItem + turnitinMenuItem + '<br>' + '</div></div>';
@@ -109,7 +109,7 @@ function redirectToDashboard() {
     // Check if on the dashboard
     if (document.getElementById("page-site-index")) {
         // If not on the dashboard, then redirect to dashboard
-        window.location.href = "https://moodle41-staging.eitidc.com/my/";
+        window.location.href = "https://moodle.eit.edu.au/my/";
     }
 }
 
