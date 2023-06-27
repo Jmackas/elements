@@ -727,7 +727,7 @@ a.nav-link.active:hover {
     display: none;
 }
 
-// hidden grades accessibility fix
+/* hidden grades accessibility fix */
 a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.dimmed_text:visited, .dimmed_text, .dimmed_text a, .dimmed_text a:link, .dimmed_text a:visited, .usersuspended, .usersuspended a, .usersuspended a:link, .usersuspended a:visited, .dimmed_category, .dimmed_category a {
     color: #6c757dc4;
 }
