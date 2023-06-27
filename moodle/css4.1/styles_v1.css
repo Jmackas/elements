@@ -735,3 +735,8 @@ a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.
 .grade_type_value:has(.dimmed_text) {
     opacity: 0.5;
 }
+
+/* Move the mass action block checkmarks a bit to the left */
+.block-massaction-checkbox {
+    transform: translate(-1.6rem,1.2rem);
+}
