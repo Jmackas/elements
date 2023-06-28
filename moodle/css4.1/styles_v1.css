@@ -652,6 +652,15 @@ EIT Admin Tools
     text-align: center;
 }
 
+/* Fix the mobile issue where the quick admin stickies to the bottom of the page */
+@media only screen and (max-width: 993px) {
+  .eitAdminTools:before {
+    position: relative;
+      top: -11px;
+      left: -3px;
+  }
+}
+
 /*======================================
 Maintenance mode message
 ======================================*/
