@@ -9,6 +9,13 @@ if (document.querySelector('[data-key="siteadminnode"]')) {
     if (document.querySelector('.page-mycourses')) {
         myCoursesAmendedView();
     }
+
+    // If on quiz page
+    if (document.querySelector('.path-mod-quiz')) {
+         hideVisibilityButton();
+    }
+
+   
     
 } else {
     redirectToDashboard()
@@ -124,8 +131,13 @@ if (countOutstandingNotifs.innerText.trim() >= 1) {
 }
 }
 
-
-
+/*============================================
+Display the visibility button for passwords
+Hidden for students so they cannot see the IRIS password.
+/*============================================*/
+function hideVisibilityButton() {
+    document.querySelector('[data-passwordunmask="unmask"]').style.visibility="visible";
+}
 
 /*============================================
 New upgrade banner
