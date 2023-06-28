@@ -749,3 +749,8 @@ a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.
 .block-massaction-checkbox {
     transform: translate(-1.6rem,1.2rem);
 }
+
+/* Hide the password "unmask" option for IRIS */
+[data-passwordunmask="unmask"] {
+    visibility: hidden;
+}
