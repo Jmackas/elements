@@ -754,3 +754,8 @@ a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.
 [data-passwordunmask="unmask"] {
     visibility: hidden;
 }
+
+/* Add the "ADINFO" code before the title of the Adinfo page on the courses.php page - requested by Sharon B*/
+[data-course-id="897"] .coursename:before {
+    content:'(ADINFO)';
+}
