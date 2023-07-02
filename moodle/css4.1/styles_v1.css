@@ -688,37 +688,6 @@ Maintenance mode message
 }
 
 
-
-
-
-
-/*======================================
-Moodle maintenance upgrade notice
-======================================*/
-.newMoodleNotice {
-    width: 100%;
-    text-align: center;
-    display: block;
-    margin-bottom: 10px;
-    color: white;
-    padding: 15px;
-    background: #e87722;
-    border: 1px solid #e87722;
-    transition: .2s;
-    border-radius: .5rem;
-}
-
-.newMoodleNotice:hover {
-    color: white;
-    text-decoration: none;
-    background: rgb(232 119 34 / 80%);
-    border: 1px solid rgb(232 119 34 / 80%);
-}
-
-.newMoodleNotice u {
-    font-size: 90%;
-}
-
 /*======================================
 Misc / Specific
 ======================================*/
