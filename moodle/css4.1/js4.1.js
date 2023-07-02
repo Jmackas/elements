@@ -139,10 +139,4 @@ function hideVisibilityButton() {
     document.querySelector('[data-passwordunmask="unmask"]').style.visibility="visible";
 }
 
-/*============================================
-New upgrade banner
-/*============================================*/
-// If on dashboard
-    if (document.querySelector('.pagelayout-mydashboard')) {
-        document.getElementById("page-header").insertAdjacentHTML("afterbegin", "<a href='https://moodle.eit.edu.au/mod/forum/discuss.php?d=29478' class='newMoodleNotice' target='_blank'><strong>The Moodle Upgrade has been completed 🎉</strong><br><span style='font-size:13px;'>Things might look a bit different to what you're used to.<br> Please do not hesitate to reach out to your Learning Support Officers if you encounter any issues on the platform.</span><br><u>Click here to read more</u></a>");
-    }
+
