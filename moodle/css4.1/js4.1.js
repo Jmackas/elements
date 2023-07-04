@@ -136,7 +136,9 @@ Display the visibility button for passwords
 Hidden for students so they cannot see the IRIS password.
 /*============================================*/
 function hideVisibilityButton() {
-    document.querySelector('[data-passwordunmask="unmask"]').style.visibility="visible";
+     if (document.querySelector('[data-passwordunmask="unmask"]')) {
+         document.querySelector('[data-passwordunmask="unmask"]').style.visibility="visible";
+    }
 }
 
 
