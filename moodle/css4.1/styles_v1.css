@@ -728,3 +728,8 @@ a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.
 [data-course-id="897"] .coursename:before {
     content:'(ADINFO)';
 }
+
+/* Fix the quiz looking funny https://help.eitidc.com/index.php?option=com_rsticketspro&view=ticket&cid=4462:cant-upload-quiz-assessments-to-moodle&Itemid=125# */
+fieldset.ablock.no-overflow.visual-scroll-x {
+clear: none;
+}
