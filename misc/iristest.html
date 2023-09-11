@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recording</title>
+</head>
+<body>
+    <h1>Screen Recording</h1>
+    <button id="startButton">Start Recording</button>
+    <button id="stopButton" disabled>Stop Recording</button>
+    <button id="downloadButton" disabled>Download Zip</button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/recordrtc@5.7.0/RecordRTC.js"></script>
+    <script src="https://cdn.rawgit.com/eligrey/Blob.js/master/Blob.js"></script>
+    <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
+    <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/master/canvas-toBlob.js"></script>
+    
+    <script>
+        let screenRecorder;
+        let webcamRecorder;
+        let audioRecorder;
+        let combinedVideo;
+        let zip;
+
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const downloadButton = document.getElementById('downloadButton');
+
+        startButton.addEventListener('click', startRecording);
+        stopButton.addEventListener('click', stopRecording);
+        downloadButton.addEventListener('click', downloadZip);
+
+        function startRecording() {
+            // Initialize screen recording
+            navigator.mediaDevices.getDisplayMedia({ video: true, audio: true })
+                .then(stream => {
+                    screenRecorder = new RecordRTC(stream, { type: 'video' });
+                    screenRecorder.startRecording();
+
+                    // Initialize webcam recording
+                    navigator.mediaDevices.getUserMedia({ video: true })
+                        .then(webcamStream => {
+                            webcamRecorder = new RecordRTC(webcamStream, { type: 'video' });
+                            webcamRecorder.startRecording();
+
+                            // Initialize audio recording
+                            navigator.mediaDevices.getUserMedia({ audio: true })
+                                .then(audioStream => {
+                                    audioRecorder = new RecordRTC(audioStream, { type: 'audio' });
+                                    audioRecorder.startRecording();
+
+                                    startButton.disabled = true;
+                                    stopButton.disabled = false;
+                                });
+                        });
+                });
+        }
+
+        function stopRecording() {
+            screenRecorder.stopRecording(() => {
+                webcamRecorder.stopRecording(() => {
+                    audioRecorder.stopRecording(() => {
+                        combinedVideo = new RecordRTC();
+                        combinedVideo.addRecordedData(screenRecorder.getBlob());
+                        combinedVideo.addRecordedData(webcamRecorder.getBlob());
+                        combinedVideo.addRecordedData(audioRecorder.getBlob());
+
+                        combinedVideo.save('combined.mp4', () => {
+                            downloadButton.disabled = false;
+                        });
+                    });
+                });
+            });
+        }
+
+        function downloadZip() {
+            zip = new JSZip();
+            zip.file('combined.mp4', combinedVideo.blob);
+
+            zip.generateAsync({ type: 'blob' }).then(function (content) {
+                saveAs(content, 'recordings.zip');
+            });
+        }
+    </script>
+</body>
+</html>
